@@ -11,6 +11,7 @@
     <script src="topper/exif.js" ></script>
     <link href="info.css" rel="stylesheet" type="text/css"></link>
     <script src="info.js"></script>
+    <title>Upload image to topper</title>
   </head>
   <body>
     <div id="loader">
@@ -21,7 +22,7 @@
         <h1>Upload Image to Topper</h1>
         <code id="url"></code>
         <canvas id="thumbnail"></canvas>
-      <form id="form" action="https://localhost:44347/api/image/" method="POST" enctype="application/x-www-form-urlencoded">
+      <form id="form" action="https://127.0.0.1:8888/api/image/" method="POST" enctype="application/x-www-form-urlencoded">
             <div>Artist Name</div><input id="artistName" name="artistName" type="text">
         <input type="submit" value="Submit">
         </form>
