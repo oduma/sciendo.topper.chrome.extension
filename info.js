@@ -67,8 +67,13 @@ function renderImageInfo(imageinfo) {
   // Render general image data.
   var datacells = divinfo.querySelectorAll('td');
   renderCells(datacells, imageinfo);
+  attachEventToFormElement();
 };
 
+function attachEventToFormElement(){
+  var formElement= document.querySelector('#form');
+  formElement.addEventListener("submit",submitForm)
+}
 /**
  * Renders the URL for the image, trimming if the length is too long.
  */
@@ -83,6 +88,10 @@ function renderUrl(url) {
 
 };
 
+function submitForm(form)
+{
+  window.close();
+}
 /**
  * Adds the URL for the image to a hidden field in the form.
  */
