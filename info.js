@@ -63,18 +63,10 @@ function renderImageInfo(imageinfo) {
   divoutput.style.display = "block";
 
   var divinfo = document.querySelector('#info');
-  var divexif = document.querySelector('#exif');
-
+  
   // Render general image data.
   var datacells = divinfo.querySelectorAll('td');
   renderCells(datacells, imageinfo);
-
-  // If EXIF data exists, unhide the EXIF table and render.
-  if (imageinfo['exif'] && !isEmpty(imageinfo['exif'])) {
-    divexif.style.display = 'block';
-    var exifcells = divexif.querySelectorAll('td');
-    renderCells(exifcells, imageinfo['exif']);
-  }
 };
 
 /**
